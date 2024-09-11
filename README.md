@@ -45,10 +45,10 @@ So for $n > 1$,
 $$
 \begin{align}
 T(n) &= 13 T(\frac{n}{13}) + 5\\
-&=13^2 (T(\frac{n}{13^2}) + 5*13) + 5\\
-&= 13^3 T(\frac{n}{13^3}) + 13*5 + 13*5 + 5\\
+&=13^2 (T(\frac{n}{13^2}) + 5 \dot 13) + 5\\
+&= 13^3 T(\frac{n}{13^3}) + 13 \dot 5 + 13 \dot 5 + 5\\
 &= \vdots\\
-&= 13^i T(\frac{n}{13^i}) + 5^13^{(i - 1)} + 5 * 13^{(i - 2)} + \dots + 5
+&= 13^i T(\frac{n}{13^i}) + 5^13^{(i - 1)} + 5  \dot  13^{(i - 2)} + \dots + 5
 \end{align} 
 $$
 
@@ -56,7 +56,7 @@ So for $i = log_{13} n$,
 
 $$
 \begin{align}
-T(n) &= 13^{(log_{13} n)} T(\frac{n}{13^{(log_{13} n)}}) + 5^13^{(log_{13} n - 1)} + 5 * 13^{(log_{13} n - 2)} + \dots + 5
+T(n) &= 13^{(log_{13} n)} T(\frac{n}{13^{(log_{13} n)}}) + 5^13^{(log_{13} n - 1)} + 5  \dot  13^{(log_{13} n - 2)} + \dots + 5
 &= n T(1) + 5 + 5 \frac{n}{13} + 5 \frac{n}{13^2} + \dots\\
 &\in \Theta(n)\
 \end{align}
