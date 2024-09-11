@@ -20,7 +20,14 @@ T(n) &= T(\frac{n}{13}) + 5\\
 &= T(\frac{n}{13^i}) + i*5
 \end{align}
 $$
-
+So for $i = log_13 n$,
+$$
+\begin{align}
+T(n) &= T(\frac{n}{13^{log_13 n}}) + 5 log_13 n\\
+&= T(1) + 5 log_13 n\\
+&\in \Theta(log n)\
+\end{align}
+$$
 
 3.
 $$ T(n) =
