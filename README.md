@@ -75,10 +75,10 @@ So for $n > 1$,
 $$
 \begin{align}
 T(n) &= 13 T(\frac{n}{13}) + 2n\\
-&=13^2 (T(\frac{n}{13^2}) + 2\frac{n}{13}) + 2n\\
-&=13^3 (T(\frac{n}{13^3}) + 2\frac{n}{13^2}) + 2\frac{n}{13} + 2n\\
+&=13^2 T(\frac{n}{13^2})+ 2n \dot 2\\
+&=13^3 T(\frac{n}{13^3}) + 2n \dot 3\\
 &= \vdots\\
-&= 13^i T(\frac{n}{13^i}) + 5^13^{(i - 1)} + 5 * 13^{(i - 2)} + \dots + 5
+&=13^i T(\frac{n}{13^i}) + 2n \dot i\\
 \end{align} 
 $$
 
@@ -86,8 +86,8 @@ So for $i = log_{13} n$,
 
 $$
 \begin{align}
-T(n) &= 13^{(log_{13} n)} T(\frac{n}{13^{(log_{13} n)}}) + 5^13^{(log_{13} n - 1)} + 5 * 13^{(log_{13} n - 2)} + \dots + 5
-&= n T(1) + 5 + 5 \frac{n}{13} + 5 \frac{n}{13^2} + \dots\\
-&\in \Theta(n)\
+T(n) &=13^{log_{13} n} T(\frac{n}{13^{log_{13} n}}) + 2n \dot log_{13} n\\
+&= n T(1) + 2n \dot log_{13} n\\
+&\in \Theta(n \log n)\
 \end{align}
 $$
