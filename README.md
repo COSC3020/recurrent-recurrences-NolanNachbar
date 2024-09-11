@@ -56,7 +56,7 @@ So for $i = log_{13} n$,
 
 $$
 \begin{align}
-T(n) &= 13^{(log_{13} n)} T(\frac{n}{13^{(log_{13} n)}}) + 5^13^{(log_{13} n - 1)} + 5  \dot  13^{(log_{13} n - 2)} + \dots + 5
+T(n) &= 13^{(log_{13} n)} T(\frac{n}{13^{(log_{13} n)}}) + 5^13^{(log_{13} n - 1)} + 5  \dot  13^{(log_{13} n - 2)} + \dots + 5\\
 &= n T(1) + 5 + 5 \frac{n}{13} + 5 \frac{n}{13^2} + \dots\\
 &\in \Theta(n)\
 \end{align}
