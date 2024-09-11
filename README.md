@@ -16,7 +16,9 @@ $$
 \begin{align}
 T(n) &= T(\frac{n}{13}) + 5\\
 &= (T(\frac{n}{13^2}) + 5) + 5\\
-&= T(\frac{n}{13^3}) + 3*5\\
+&= T(\frac{n}{13^3}) + 3 \vdot 5\\
+&= \vdots\\
+&= T(\frac{n}{13^i}) + 5\dot i
 \end{align} 
 $$
 
@@ -30,7 +32,7 @@ T(n) &= T(\frac{n}{13^{log_13 n}}) + 5 log_13 n\\
 \end{align}
 $$
 
-3.
+2.
 $$ T(n) =
     \begin{cases}
         1 & n \leq 1\\
@@ -38,10 +40,54 @@ $$ T(n) =
     \end{cases}
 $$
 
-4.
+So for $n > 1$,
+
+$$
+\begin{align}
+T(n) &= 13 T(\frac{n}{13}) + 5\\
+&=13^2 (T(\frac{n}{13^2}) + 5*13) + 5\\
+&= 13^3 T(\frac{n}{13^3}) + 13*5 + 13*5 + 5\\
+&= \vdots\\
+&= 13^i T(\frac{n}{13^i}) + 5^13^{(i - 1)} + 5 * 13^{(i - 2)} + \dots + 5
+\end{align} 
+$$
+
+So for $i = log_13 n$,
+
+$$
+\begin{align}
+T(n) &= 13^{(log_13 n)} T(\frac{n}{13^{(log_13 n)}}) + 5^13^{(log_13 n - 1)} + 5 * 13^{(log_13 n - 2)} + \dots + 5
+&= n T(1) + 5 + 5 \frac{n}{13} + 5 \frac{n}{13^2} + \dots\\
+&\in \Theta(n)\
+\end{align}
+$$
+
+3.
 $$ T(n) =
     \begin{cases}
         1 & n \leq 1\\
         13 T\left(\frac{n}{13}\right) + 2n & n > 1
     \end{cases}
+$$
+
+So for $n > 1$,
+
+$$
+\begin{align}
+T(n) &= 13 T(\frac{n}{13}) + 2n\\
+&=13^2 (T(\frac{n}{13^2}) + 2\frac{n}{13}) + 2n\\
+&=13^3 (T(\frac{n}{13^3}) + 2\frac{n}{13^2}) + 2\frac{n}{13} + 2n\\
+&= \vdots\\
+&= 13^i T(\frac{n}{13^i}) + 5^13^{(i - 1)} + 5 * 13^{(i - 2)} + \dots + 5
+\end{align} 
+$$
+
+So for $i = log_13 n$,
+
+$$
+\begin{align}
+T(n) &= 13^{(log_13 n)} T(\frac{n}{13^{(log_13 n)}}) + 5^13^{(log_13 n - 1)} + 5 * 13^{(log_13 n - 2)} + \dots + 5
+&= n T(1) + 5 + 5 \frac{n}{13} + 5 \frac{n}{13^2} + \dots\\
+&\in \Theta(n)\
+\end{align}
 $$
