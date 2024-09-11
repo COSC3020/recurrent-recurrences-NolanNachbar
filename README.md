@@ -22,13 +22,13 @@ T(n) &= T(\frac{n}{13}) + 5\\
 \end{align} 
 $$
 
-So for $i = log_{13} n$,
+So for $i = \log_{13} n$,
 
 $$
 \begin{align}
-T(n) &= T(\frac{n}{13^{log_{13} n}}) + 5 log_{13} n\\
-&= T(1) + 5 log_{13} n\\
-&\in \Theta(log n)\
+T(n) &= T(\frac{n}{13^{\log_{13} n}}) + 5 \log_{13} n\\
+&= T(1) + 5 \log_{13} n\\
+&\in \Theta(\log n)\
 \end{align}
 $$
 
@@ -52,11 +52,11 @@ T(n) &= 13 T(\frac{n}{13}) + 5\\
 \end{align} 
 $$
 
-So for $i = log_{13} n$,
+So for $i = \log_{13} n$,
 
 $$
 \begin{align}
-T(n) &= 13^{(log_{13} n)} T(\frac{n}{13^{(log_{13} n)}}) + 5^13^{(log_{13} n - 1)} + 5  \cdot  13^{(log_{13} n - 2)} + \cdots + 5\\
+T(n) &= 13^{(\log_{13} n)} T(\frac{n}{13^{(\log_{13} n)}}) + 5^13^{(\log_{13} n - 1)} + 5  \cdot  13^{(\log_{13} n - 2)} + \cdots + 5\\
 &= n T(1) + 5 + 5 \frac{n}{13} + 5 \frac{n}{13^2} + \cdots\\
 &\in \Theta(n)\
 \end{align}
@@ -82,12 +82,12 @@ T(n) &= 13 T(\frac{n}{13}) + 2n\\
 \end{align} 
 $$
 
-So for $i = log_{13} n$,
+So for $i = \log_{13} n$,
 
 $$
 \begin{align}
-T(n) &=13^{log_{13} n} T(\frac{n}{13^{log_{13} n}}) + 2n \cdot log_{13} n\\
-&= n T(1) + 2n \cdot log_{13} n\\
+T(n) &=13^{\log_{13} n} T(\frac{n}{13^{\log_{13} n}}) + 2n \cdot \log_{13} n\\
+&= n T(1) + 2n \cdot \log_{13} n\\
 &\in \Theta(n \log n)\
 \end{align}
 $$
