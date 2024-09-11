@@ -16,7 +16,7 @@ $$
 \begin{align}
 T(n) &= T(\frac{n}{13}) + 5\\
 &= (T(\frac{n}{13^2}) + 5) + 5\\
-&= T(\frac{n}{13^3}) + 3 \vdot 5\\
+&= T(\frac{n}{13^3}) + 3 \dot 5\\
 &= \vdots\\
 &= T(\frac{n}{13^i}) + 5\dot i
 \end{align} 
