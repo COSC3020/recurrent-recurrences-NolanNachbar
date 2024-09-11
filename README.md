@@ -91,3 +91,7 @@ T(n) &=13^{\log_{13} n} T(\frac{n}{13^{\log_{13} n}}) + 2n \cdot \log_{13} n\\
 &\in \Theta(n \log n)\
 \end{align}
 $$
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+
+I followed the recursion analysis example on slide 39 of the lecture01-sorting slides.
